@@ -1,0 +1,26 @@
+Este flujo automatizado se encarga de extraer datos nuevos desde un archivo Excel alojado en OneDrive, procesarlos y notificar mediante correo electrónico, todo con los siguientes pasos:
+
+Recurrence (Recurrencia):
+Configura la ejecución periódica del flujo, por ejemplo, cada hora o cada cierto intervalo definido. Esto garantiza que el proceso se ejecute automáticamente sin intervención manual.
+
+List rows present in a table (Listar filas en tabla):
+Obtiene todas las filas presentes en una tabla específica dentro del archivo Excel almacenado en OneDrive. Esta acción es la base para acceder a los datos a analizar.
+
+Filter array (Filtrar arreglo):
+Aplica filtros sobre las filas obtenidas para seleccionar solo aquellas que cumplen una condición determinada, por ejemplo, registros nuevos basados en una columna de fecha o estado. Esto evita procesar datos ya analizados previamente.
+
+Condition (Condición):
+Evalúa si el resultado del filtro tiene filas (es decir, si hay datos nuevos). Si la condición se cumple (datos nuevos existen), el flujo continúa con las acciones siguientes; si no, termina sin enviar notificaciones.
+
+Create CSV table (Crear tabla CSV):
+Convierte las filas filtradas en una tabla con formato CSV, ideal para adjuntar en correos o para que otros sistemas la procesen fácilmente.
+
+Create file (Crear archivo):
+Guarda el archivo CSV generado en una ubicación temporal dentro de OneDrive o SharePoint para mantener un respaldo o permitir su descarga.
+
+Send email (Enviar correo):
+Envía un correo electrónico a una dirección específica, adjuntando el archivo CSV con los datos nuevos y un asunto limpio (sin caracteres especiales) para evitar problemas en posteriores procesos automatizados o scripts.
+
+Este flujo permite mantener actualizado y comunicado el estado de nuevos registros en la base de datos Excel, optimizando el procesamiento y reduciendo el trabajo manual.
+
+![Descripción de la imagen](ruta/a/tu/imagen.png)
